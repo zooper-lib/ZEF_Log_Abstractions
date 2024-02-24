@@ -1,39 +1,96 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# ZefLogAbstractions
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A versatile and extensible logging framework for Dart applications, providing configurable log levels, custom formatting, and adaptable output options. Designed with flexibility in mind, ZefLogAbstractions allows developers to easily integrate comprehensive logging into their Dart and Flutter projects.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- **Configurable Log Levels**: Trace, Debug, Info, Warning, Error, and Fatal to suit various verbosity needs.
+- **Custom Log Formatters**: Define how log messages are formatted and displayed.
+- **Flexible Log Adapters**: Easily direct log output to various destinations like console, files, or external services.
+- **Singleton Logger Instance**: Ensures consistent logging configuration across your application.
+- **Extensible Design**: Implement your own formatters and adapters to suit specific requirements.
 
-## Getting started
+## Getting Started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To use ZefLogAbstractions in your Dart project, add it as a dependency in your `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  zef_log_abstractions: <latest>
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+### Basic Setup
+
+Initialize the logger with default settings:
 
 ```dart
-const like = 'sample';
+import 'package:zef_log_abstractions/zef_log_abstractions.dart';
+
+void main() {
+  // Initialize Logger with default settings
+  Logger.I.info(message: 'Application started');
+}
 ```
 
-## Additional information
+### Custom Configuration
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+Configure the logger with custom log level, formatter, and adapter:
+
+```dart
+LoggerBuilder()
+  .withLogLevel(LogLevel.debug)
+  .withAdapter(ConsoleLoggerAdapter())
+  .withFormatter(CustomLogFormatter())
+  .build();
+
+Logger.I.debug(message: 'Custom configuration set');
+```
+
+### Logging Messages
+
+Log messages at different levels throughout your application:
+
+```dart
+Logger.I.trace(message: 'Detailed trace message');
+Logger.I.debug(message: 'Debugging message');
+Logger.I.info(message: 'Informational message');
+Logger.I.warning(message: 'Warning message');
+Logger.I.error(message: 'Error message', error: 'Error details');
+Logger.I.fatal(message: 'Fatal error message', error: 'Critical error details');
+```
+
+## Extending the code
+
+### Implementing Custom LoggerAdapter
+
+Implement LoggerAdapter to direct logs to a custom destination:
+
+```dart
+class MyCustomLoggerAdapter implements LoggerAdapter {
+  @override
+  void info({required String message, StackTrace? stackTrace, required LogFormatter formatter}) {
+    // Custom logic to handle info level logs
+  }
+
+  // Implement other methods...
+}
+```
+
+### Creating Custom LogFormatter
+
+Create a LogFormatter to customize log message format:
+
+```dart
+class MyCustomLogFormatter implements LogFormatter {
+  @override
+  String format({required LogLevel level, required String message, required DateTime timestamp, String? error, StackTrace? stackTrace}) {
+    // Return custom formatted string
+  }
+}
+```
+
+## Contributing
+
+Contributions to this package are welcome! Please read our Contributing Guide for more information on how to get started.

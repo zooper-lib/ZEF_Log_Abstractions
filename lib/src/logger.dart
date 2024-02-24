@@ -137,7 +137,6 @@ abstract class Logger {
       DefaultLogFormatter(),
     )..warning(
         message: 'Logger is using the default configuration. Please initialize it properly for full functionality.',
-        stackTrace: StackTrace.current,
       );
   }
 }
