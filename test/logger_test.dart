@@ -1,7 +1,7 @@
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:test/test.dart';
-import 'package:zef_log_abstractions/zef_log_abstractions.dart';
+import 'package:zef_log_core/zef_log_core.dart';
 
 import 'logger_test.mocks.dart';
 

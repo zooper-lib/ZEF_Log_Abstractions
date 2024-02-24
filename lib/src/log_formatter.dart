@@ -1,4 +1,4 @@
-import 'package:zef_log_abstractions/zef_log_abstractions.dart';
+import 'package:zef_log_core/zef_log_core.dart';
 
 /// `LogFormatter` defines an interface for formatting log messages. Implementations
 /// of this class should convert log messages and their associated data (such as log

@@ -1,4 +1,4 @@
-import 'package:zef_log_abstractions/zef_log_abstractions.dart';
+import 'package:zef_log_core/zef_log_core.dart';
 
 /// `LoggerAdapter` serves as an abstract base for implementing various logging
 /// output mechanisms. It defines a set of methods corresponding to different

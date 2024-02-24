@@ -1,8 +1,8 @@
-name: zef_log_abstractions
+name: zef_log_core
 description: A versatile and extensible logging framework for Dart applications, providing configurable log levels, custom formatting, and adaptable output options.
 version: 0.0.1
 homepage: https://www.zooper.dev
-repository: https://github.com/zooper-lib/ZEF_Log_Abstractions
+repository: https://github.com/zooper-lib/ZEF_Log_Core
 topics:
   - logging
   - log

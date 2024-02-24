@@ -1,4 +1,4 @@
-library zef_log_abstractions;
+library zef_log_core;
 
 export 'src/log_formatter.dart';
 export 'src/logger.dart';

@@ -1,6 +1,6 @@
 import 'dart:developer' as developer;
 
-import 'package:zef_log_abstractions/zef_log_abstractions.dart';
+import 'package:zef_log_core/zef_log_core.dart';
 
 class ConsoleLoggerAdapter implements LoggerAdapter {
   @override

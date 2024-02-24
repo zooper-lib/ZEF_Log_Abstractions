@@ -1,4 +1,4 @@
-import 'package:zef_log_abstractions/zef_log_abstractions.dart';
+import 'package:zef_log_core/zef_log_core.dart';
 
 import 'implementations/concrete_logger.dart';
 import 'implementations/console_logger_adapter.dart';
