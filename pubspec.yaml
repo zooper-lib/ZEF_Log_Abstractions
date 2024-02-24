@@ -1,6 +1,6 @@
 name: zef_log_core
-description: A versatile and extensible logging framework for Dart applications, providing configurable log levels, custom formatting, and adaptable output options.
-version: 0.0.1
+description: A versatile and extensible logging framework for Dart applications, providing configurable log levels, custom formatting, and adaptable output options. Designed with flexibility in mind, this package allows developers to easily integrate comprehensive logging into their Dart and Flutter projects.
+version: 0.0.2
 homepage: https://www.zooper.dev
 repository: https://github.com/zooper-lib/ZEF_Log_Core
 topics:

@@ -89,7 +89,10 @@ class ConcreteLogger implements Logger {
   }
 
   @override
-  void error({required String message, required String error, StackTrace? stackTrace}) {
+  void error(
+      {required String message,
+      required String error,
+      StackTrace? stackTrace}) {
     if (shouldLog(LogLevel.error)) {
       _adapter.error(
         message: message,

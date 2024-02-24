@@ -136,7 +136,8 @@ abstract class Logger {
       LogLevel.warning,
       DefaultLogFormatter(),
     )..warning(
-        message: 'Logger is using the default configuration. Please initialize it properly for full functionality.',
+        message:
+            'Logger is using the default configuration. Please initialize it properly for full functionality.',
       );
   }
 }
@@ -208,7 +209,8 @@ class LoggerBuilder {
   /// - Returns the configured [Logger] instance, accessible globally via `Logger.I`.
   Logger build() {
     if (Logger._instance != null) {
-      throw StateError('Logger has already been initialized and cannot be configured again.');
+      throw StateError(
+          'Logger has already been initialized and cannot be configured again.');
     }
 
     Logger._instance = ConcreteLogger(

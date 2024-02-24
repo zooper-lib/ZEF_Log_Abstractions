@@ -17,7 +17,8 @@ void main() {
       // Assuming your formatter includes the level, message, and timestamp
       expect(result, contains(LogLevel.info.icon));
       expect(result, contains('Test message'));
-      expect(result, contains(DateTime(2020, 1, 1, 12, 0, 0).toIso8601String()));
+      expect(
+          result, contains(DateTime(2020, 1, 1, 12, 0, 0).toIso8601String()));
     });
   });
 }

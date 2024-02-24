@@ -15,11 +15,18 @@ void main() {
       mockAdapter = MockLoggerAdapter();
       mockFormatter = MockLogFormatter();
 
-      LoggerBuilder().withLogLevel(LogLevel.info).withAdapter(mockAdapter).withFormatter(mockFormatter).build();
+      LoggerBuilder()
+          .withLogLevel(LogLevel.info)
+          .withAdapter(mockAdapter)
+          .withFormatter(mockFormatter)
+          .build();
     });
 
-    test('should throw when attempting to reconfigure Logger after initialization', () {
-      expect(() => LoggerBuilder().withLogLevel(LogLevel.debug).build(), throwsA(isA<StateError>()));
+    test(
+        'should throw when attempting to reconfigure Logger after initialization',
+        () {
+      expect(() => LoggerBuilder().withLogLevel(LogLevel.debug).build(),
+          throwsA(isA<StateError>()));
     });
 
     test('should pass log message to adapter at correct level', () {
@@ -53,7 +60,8 @@ void main() {
       final errorDetail = 'Error detail';
       final stackTrace = StackTrace.current;
 
-      Logger.I.error(message: errorMessage, error: errorDetail, stackTrace: stackTrace);
+      Logger.I.error(
+          message: errorMessage, error: errorDetail, stackTrace: stackTrace);
 
       verify(mockAdapter.error(
         message: anyNamed('message'),
@@ -68,7 +76,10 @@ void main() {
       final fatalErrorDetail = 'Fatal error detail';
       final stackTrace = StackTrace.current;
 
-      Logger.I.fatal(message: fatalMessage, error: fatalErrorDetail, stackTrace: stackTrace);
+      Logger.I.fatal(
+          message: fatalMessage,
+          error: fatalErrorDetail,
+          stackTrace: stackTrace);
 
       verify(mockAdapter.fatal(
         message: anyNamed('message'),
