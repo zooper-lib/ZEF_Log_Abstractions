@@ -1,6 +1,6 @@
-# ZefLogAbstractions
+# zef_log_abstractions
 
-A versatile and extensible logging framework for Dart applications, providing configurable log levels, custom formatting, and adaptable output options. Designed with flexibility in mind, ZefLogAbstractions allows developers to easily integrate comprehensive logging into their Dart and Flutter projects.
+A versatile and extensible logging framework for Dart applications, providing configurable log levels, custom formatting, and adaptable output options. Designed with flexibility in mind, this package allows developers to easily integrate comprehensive logging into their Dart and Flutter projects.
 
 ## Features
 
@@ -12,7 +12,7 @@ A versatile and extensible logging framework for Dart applications, providing co
 
 ## Getting Started
 
-To use ZefLogAbstractions in your Dart project, add it as a dependency in your `pubspec.yaml` file:
+To use this package in your Dart project, add it as a dependency in your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
